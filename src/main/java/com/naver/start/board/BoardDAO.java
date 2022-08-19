@@ -23,12 +23,12 @@ public class BoardDAO
 		while (rs.next())
 		{
 			boardDTO = new BoardDTO();
-			// ±Û¹øÈ£, ±ÛÁ¦¸ñ, ÀÛ¼ºÀÚ, ÀÛ¼º³¯Â¥, Á¶È¸¼ö¸¦ Ãâ·Â
+			// ï¿½Û¹ï¿½È£, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Û¼ï¿½ï¿½ï¿½, ï¿½Û¼ï¿½ï¿½ï¿½Â¥, ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 			boardDTO.setBoardNum(rs.getLong("boardnum"));
 			boardDTO.setTitle(rs.getString("title"));
 			boardDTO.setWriter(rs.getString("writer"));
-			boardDTO.setToday(rs.getDate("today"));
-			boardDTO.setView_count(rs.getLong("view_count"));
+			boardDTO.setRegdate(rs.getDate("regdate"));
+			boardDTO.setHit(rs.getLong("hit"));
 			ar.add(boardDTO);
 		}
 		System.out.println("boardnum: " + boardDTO.getBoardNum());
@@ -52,8 +52,8 @@ public class BoardDAO
 			boardDTO.setTitle(rs.getString("title"));
 			boardDTO.setContext(rs.getString("context"));
 			boardDTO.setWriter(rs.getString("writer"));
-			boardDTO.setToday(rs.getDate("today"));
-			boardDTO.setView_count(rs.getLong("view_count"));
+			boardDTO.setRegdate(rs.getDate("regdate"));
+			boardDTO.setHit(rs.getLong("hit"));
 		}
 
 		DBConnector.disConnect(rs, st, DBConn);

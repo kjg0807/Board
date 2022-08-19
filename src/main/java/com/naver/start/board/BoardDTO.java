@@ -8,8 +8,8 @@ public class BoardDTO
 	private String title;
 	private String context;
 	private String writer;
-	private Date today;
-	private long view_count;
+	private Date regdate;
+	private long hit;
 
 	public long getBoardNum()
 	{
@@ -51,24 +51,24 @@ public class BoardDTO
 		this.writer = writer;
 	}
 
-	public Date getToday()
+	public Date getRegdate()
 	{
-		return today;
+		return regdate;
 	}
 
-	public void setToday(Date today)
+	public void setRegdate(Date regdate)
 	{
-		this.today = today;
+		this.regdate = regdate;
 	}
 
-	public long getView_count()
+	public long getHit()
 	{
-		return view_count;
+		return hit;
 	}
 
-	public void setView_count(long view_count)
+	public void setHit(long hit)
 	{
-		this.view_count = view_count;
+		this.hit = hit;
 	}
 
 }
